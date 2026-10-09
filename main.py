@@ -41,7 +41,7 @@ class AccessControlPlugin(Star):
                     "查看禁用名单：查看禁用用户及相关开关状态。\n"
                     "权限禁用 @成员 / 禁用 QQ号：加入禁用名单并开启用户黑名单。\n"
                     "权限启用 @成员 / 启用 QQ号：移出禁用名单。\n"
-                    "也支持“QQ号 启用”和 / 前缀。\n\n"
+                    "命令支持 / 前缀。\n\n"
                     "访问控制开启后，按用户黑名单、私聊开关、群白名单和群聊 @ 对象过滤设置处理消息。\n"
                     "启用用户后，仍需符合其他访问规则；关闭总开关时，禁用名单暂不生效。\n"
                     "以上命令仅限 AstrBot 管理员使用。"
@@ -84,7 +84,7 @@ class AccessControlPlugin(Star):
                 r"(?:权限)?(禁用|启用)\s*([1-9][0-9]{4,11})",
                 plain_text,
             ) or re.fullmatch(
-                r"([1-9][0-9]{4,11})\s*(禁用|启用)",
+                r"([1-9][0-9]{4,11})\s*(禁用)",
                 plain_text,
             )
             if match:
@@ -94,7 +94,7 @@ class AccessControlPlugin(Star):
                     target_qq = second
                 else:
                     target_qq = first
-                    action = "disable" if second == "禁用" else "enable"
+                    action = "disable"
 
         if not action or not target_qq:
             return
