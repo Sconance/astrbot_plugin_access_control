@@ -1,7 +1,7 @@
 name: astrbot_plugin_access_control
 display_name: 消息访问控制
 desc: 通过群白名单、用户忽略名单、私聊开关和 @ 过滤，管理机器人的消息响应范围，支持管理员指令维护用户权限
-version: 1.0
+version: 1.1.0
 author: Sconance
 astrbot_version: ">=4.19.4"
 help: |
