@@ -14,7 +14,7 @@ from astrbot.core.star.filter.event_message_type import EventMessageType
     "astrbot_plugin_access_control",
     "Sconance",
     "限制机器人响应范围，并允许管理员通过群命令维护用户权限",
-    "1.0.1",
+    "1.0",
 )
 class AccessControlPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
