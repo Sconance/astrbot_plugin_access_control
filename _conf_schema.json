@@ -1,0 +1,44 @@
+{
+  "enabled": {
+    "description": "启用访问控制",
+    "type": "bool",
+    "hint": "关闭后不执行群聊、用户、私聊和 @ 过滤",
+    "default": false
+  },
+  "allow_private": {
+    "description": "允许私聊",
+    "type": "bool",
+    "hint": "关闭后不处理私聊消息；用户黑名单仍优先检查",
+    "default": true
+  },
+  "allowed_groups": {
+    "description": "允许使用机器人的群聊",
+    "type": "list",
+    "hint": "每项填写一个 QQ 群号；访问控制开启时，留空将禁止所有群聊",
+    "default": []
+  },
+  "blocked_sender_enabled": {
+    "description": "启用用户黑名单",
+    "type": "bool",
+    "hint": "开启后忽略名单中用户的消息，适用于群聊和私聊",
+    "default": false
+  },
+  "blocked_sender_qqs": {
+    "description": "禁用的用户 QQ 号",
+    "type": "list",
+    "hint": "每项填写一个 QQ 号；管理员可用“权限禁用 / 权限启用”管理",
+    "default": []
+  },
+  "blocked_at_enabled": {
+    "description": "启用 @ 对象过滤",
+    "type": "bool",
+    "hint": "群聊消息实际 @ 到下方指定 QQ 时，机器人不响应；不适用于私聊",
+    "default": false
+  },
+  "blocked_at_qq": {
+    "description": "屏蔽的 @ 对象 QQ 号",
+    "type": "string",
+    "hint": "只检测实际 @ 的 QQ 号，不匹配昵称或普通文字",
+    "default": ""
+  }
+}

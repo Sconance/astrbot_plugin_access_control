@@ -1,0 +1,14 @@
+name: astrbot_plugin_access_control
+display_name: 消息访问控制
+desc: 通过群白名单、用户忽略名单、私聊开关和 @ 过滤，管理机器人的消息响应范围，支持管理员指令维护用户权限
+version: 1.0.0
+author: Sconance
+astrbot_version: ">=4.19.4"
+help: |
+  适用于各类机器人功能插件的消息访问控制。
+  管理员命令：
+  - 权限禁用 / 权限启用（配合 @某人，或直接输入 QQ 号）
+  详细说明见 README.md 与插件设置页。
+support_platforms:
+  - aiocqhttp
+repo: https://github.com/Sconance/astrbot_plugin_access_control
